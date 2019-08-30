@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <title>forecast</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <style>
+    body{
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(0, 0, 0, 0.2) url("images/weatherbg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+	}
+    /* printing the values of the js*/
+    #city-name{
+        color: rgb(255, 255, 255);
+        font-family:'Comic Sans MS' cursive, sans-serif;
+        font-size: 25px;
+
+    }
+    #icon{
+        height: 100px;
+        width: 100px;
+    }
+    #temp{
+        font-family:'Comic Sans MS' cursive, sans-serif;
+        font-size: 30px;
+        color: #F71D3A;
+    }
+
+    #humidity-div{
+        font-family:'Comic Sans MS' cursive, sans-serif;
+        font-size: 30px;
+        color: #090A0C;
+    }
+    /* container styling*/
+
+    .city-icon-holder{
+        background-color: #71CF00;
+        /* height: 100px; */
+
+       
+    }
+    .temperature{
+        background-color: #008BF8;
+        /* height: 100px; */
+    }
+    .humidity{
+ background-color: #92BFB1;
+/* height: 100px;*/
+
+    }
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-expand{-sm|-md|-lg|-xl} fixed-top">
+            <a class="navbar-brand" href="#">Disaster Management</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active" id="a">
+                  <a class="nav-link" href="animation.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" id="b">
+                  <a class="nav-link" href="weatheranimation.html">Weather Forecast</a>
+                </li>
+                <li class="nav-item" id="c">
+                  <a class="nav-link " href="#"></a>
+                </li>
+              </ul>
+    
+            </div>
+          </nav>
+
+
+
+            <h3 style="margin-top: 200px;text-align:center;font-size: 60px;font-family: 'Josefin Sans', sans-serif;color: white">Weather</h3>
+
+
+
+
+          <div class=" container" style="margin-top:200px;">
+
+            <div class="input-group">
+                <input type="text" class="form-control" id="search-txt" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="input-group-text btn btn-primary id="basic-addon2"><a href="#main" id="search-btn" class="large material-icons">search</a></b>
+                </div>
+              </div>
+          </div>
+
+          <main  style="background-color:transparent;margin-top: 200px;">
+          
+                       
+                
+                
+                      
+                    
+                
+   
+<!-- 
+
+            <div class="city-icon-holder">
+              <div id="city-name"></div>
+              <img src=""  id="icon">
+                </div>
+       
+            <h5 class="card-title">Temprature</h5>    
+            <div class="temperature"></div>
+              <div id="temp"> </div>
+            </div>
+            <h5 class="card-title">Humidity</h5>
+            <div class="humidity" id="main">
+                  <div id="humidity-div"> </div>
+                </div>
+ -->
+
+
+                <div class="container">
+              <div class="table-responsive" >
+                <table class="table-dark table" >
+                  <tr>
+                    <td>
+                      <!-- <h4>City:</h4><br> -->
+                      <!-- <div class="city-icon-holder"> -->
+                      <p id="city-name"></p>
+                      <!-- </div> -->
+                      
+                    </td>
+                    <td>
+                      
+                      <!-- <h4>Temprature</h4> -->
+                      <!-- <div class="temperature"> -->
+                        <div id="temp"> </div>
+                      <!-- </div> -->
+                      </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                        <!-- <div class="city-icon-holder"> -->
+                            <!-- <div id="city-name"></div> -->
+                            <img src=""  id="icon" alt=" weather icon">
+                              <!-- </div> -->
+                     
+                    </td>
+                    <td>
+                        <!-- <div class="humidity" id="main"> -->
+                            <div id="humidity-div"> </div>
+                          <!-- </div> -->
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+<!-- 
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </main>
+
+
+
+
+
+         <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+
+  
+
+         <script type="text/javascript">
+           
+           const appKey = "6a1d73afe2efa22ccbfb742028768309";
+         
+         let searchButton = document.getElementById("search-btn");
+         let searchInput = document.getElementById("search-txt");
+         let cityName = document.getElementById("city-name");
+         let icon = document.getElementById("icon");
+         let temperature = document.getElementById("temp");
+         let humidity = document.getElementById("humidity-div");
+         
+         searchButton.addEventListener("click", findWeatherDetails);
+         searchInput.addEventListener("keyup", enterPressed);
+         
+         function enterPressed(event) {
+           if (event.key === "Enter") {
+             findWeatherDetails();
+           }
+         }
+         
+         function findWeatherDetails() {
+           if (searchInput.value === "") {
+           
+           }else {
+             let searchLink = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput.value + "&appid="+appKey;
+            httpRequestAsync(searchLink, theResponse);
+           }
+          }
+         
+         function theResponse(response) {
+           let jsonObject = JSON.parse(response);
+           cityName.innerHTML = jsonObject.name;
+           icon.src = "http://openweathermap.org/img/wn/" + jsonObject.weather[0].icon + "@2x.png";
+           temperature.innerHTML ="   " +parseInt(jsonObject.main.temp - 273) + "°" +"C";
+           humidity.innerHTML = "   "+jsonObject.main.humidity + "%" ;
+         }
+         
+         function httpRequestAsync(url, callback)
+         {
+           console.log("hello");
+             var httpRequest = new XMLHttpRequest();
+             httpRequest.onreadystatechange = () => { 
+                 if (httpRequest.readyState == 4 && httpRequest.status == 200)
+                     callback(httpRequest.responseText);
+             }
+             httpRequest.open("GET", url, true); // true for asynchronous 
+             httpRequest.send();
+         }
+         </script>
+
+    </body>
+</html>
